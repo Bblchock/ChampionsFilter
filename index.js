@@ -1310,10 +1310,8 @@ switcherValue = function () {
 	}
 	checkValue();
 	findChampions();
-	// console.log(valueTrue);
 }
 switcherValueAllRung = function () {
-	// console.log('event.target === ' + event.target.textContent);
 	let target = event.target.textContent
 	switch (target) {
 		case 'All':
