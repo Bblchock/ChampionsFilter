@@ -78,3 +78,11 @@ button {
 	color: rgb(0, 0, 0);
 	font-variant: small-caps;
 }
+
+.active:hover {
+	border: 1px double black;
+}
+
+.noActive:hover {
+	border: 1px double rgb(0, 0, 255);
+}
