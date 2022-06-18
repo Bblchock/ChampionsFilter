@@ -6,7 +6,8 @@ const divChampions = document.querySelector('.champions');
 const button = document.querySelectorAll('button');
 const btnAll = document.getElementById('all');
 const max = document.getElementById('max');
-const noMax = document.getElementById('noMax');
+const aboveFive = document.getElementById('aboveFive');
+const belowFive = document.getElementById('belowFive');
 
 let champions = [
 	{
@@ -914,7 +915,7 @@ let champions = [
 	},
 	{
 		name: 'Сорака',
-		rung: '4',
+		rung: '5',
 		position: ['bot'],
 		role: ['support'],
 		img: 'url(img/soraka.jpg)',
@@ -1134,7 +1135,8 @@ let champions = [
 let valueTrue = {
 	all: true,
 	maxRung: false,
-	noMaxRung: false,
+	rungAboveFive: false,
+	rungBelowFive: false,
 	top: false,
 	mid: false,
 	bot: false,
@@ -1164,13 +1166,21 @@ function render() {
 		champName.textContent = obj.name
 	})
 }
+
+let findChampions2 = function () {
+
+}
+
 let findChampions = function () {
 	finaly = champions;
 	if (valueTrue.maxRung === true) {
 		finaly = finaly.filter(champ => champ.rung === '7')
 	}
-	if (valueTrue.noMaxRung === true) {
-		finaly = finaly.filter(champ => champ.rung !== '7')
+	if (valueTrue.rungAboveFive === true) {
+		finaly = finaly.filter(champ => champ.rung === '5' || champ.rung === '6')
+	}
+	if (valueTrue.rungBelowFive === true) {
+		finaly = finaly.filter(champ => champ.rung < '5')
 	}
 	if (valueTrue.top === true) {
 		finaly = finaly.filter(champ => champ.position.indexOf('top') !== -1)
@@ -1208,7 +1218,8 @@ let findChampions = function () {
 let clear = function () {
 	valueTrue.all = true;
 	valueTrue.maxRung = false;
-	valueTrue.noMaxRung = false;
+	valueTrue.rungAboveFive = false;
+	valueTrue.rungBelowFive = false;
 	valueTrue.top = false;
 	valueTrue.mid = false;
 	valueTrue.bot = false;
@@ -1226,7 +1237,8 @@ let clear = function () {
 let checkValue = function () {
 	if (
 		valueTrue.maxRung === false &&
-		valueTrue.noMaxRung === false &&
+		valueTrue.rungAboveFive === false &&
+		valueTrue.rungBelowFive === false &&
 		valueTrue.top === false &&
 		valueTrue.mid === false &&
 		valueTrue.bot === false &&
@@ -1312,7 +1324,7 @@ switcherValue = function () {
 	findChampions();
 }
 switcherValueAllRung = function () {
-	let target = event.target.textContent
+	let target = event.target.textContent;
 	switch (target) {
 		case 'All':
 			clear();
@@ -1321,9 +1333,13 @@ switcherValueAllRung = function () {
 			if (valueTrue.maxRung === false) {
 				valueTrue.maxRung = true
 				max.setAttribute('class', 'active')
-				if (valueTrue.noMaxRung === true) {
-					valueTrue.noMaxRung = false;
-					noMax.setAttribute('class', 'noActive')
+				if (valueTrue.rungAboveFive === true) {
+					valueTrue.rungAboveFive = false;
+					aboveFive.setAttribute('class', 'noActive')
+				}
+				if (valueTrue.rungBelowFive === true) {
+					valueTrue.rungBelowFive = false;
+					belowFive.setAttribute('class', 'noActive')
 				}
 			} else {
 				valueTrue.maxRung = false;
@@ -1332,24 +1348,45 @@ switcherValueAllRung = function () {
 			valueTrue.all = false;
 
 			break;
-		case 'NoMaxRung':
-			if (valueTrue.noMaxRung === false) {
-				valueTrue.noMaxRung = true
-				noMax.setAttribute('class', 'active')
+		case 'Rung 5-6':
+			if (valueTrue.rungAboveFive === false) {
+				valueTrue.rungAboveFive = true
+				aboveFive.setAttribute('class', 'active')
 				if (valueTrue.maxRung === true) {
 					valueTrue.maxRung = false;
 					max.setAttribute('class', 'noActive')
 				}
+				if (valueTrue.rungBelowFive === true) {
+					valueTrue.rungBelowFive = false;
+					belowFive.setAttribute('class', 'noActive')
+				}
 			} else {
-				valueTrue.noMaxRung = false;
-				noMax.setAttribute('class', 'noActive')
+				valueTrue.rungAboveFive = false;
+				aboveFive.setAttribute('class', 'noActive')
+			}
+			valueTrue.all = false;
+			break;
+		case 'Rung < 5':
+			if (valueTrue.rungBelowFive === false) {
+				valueTrue.rungBelowFive = true
+				belowFive.setAttribute('class', 'active')
+				if (valueTrue.maxRung === true) {
+					valueTrue.maxRung = false;
+					max.setAttribute('class', 'noActive')
+				}
+				if (valueTrue.rungAboveFive === true) {
+					valueTrue.rungAboveFive = false;
+					aboveFive.setAttribute('class', 'noActive')
+				}
+			} else {
+				valueTrue.rungBelowFive = false;
+				belowFive.setAttribute('class', 'noActive')
 			}
 			valueTrue.all = false;
 			break;
 	}
 	checkValue();
 	findChampions();
-	console.log(valueTrue);
 }
 
 blockPosition.addEventListener('click', switcherValue);
