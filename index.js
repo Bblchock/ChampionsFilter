@@ -1160,10 +1160,32 @@ function render() {
 		champion.setAttribute('class', 'champion')
 		champion.style.backgroundImage = obj.img;
 
+		//rung
+		let champRung = document.createElement('div')
+		champion.appendChild(champRung);
+		champRung.setAttribute('class', 'championRung')
+		champRung.textContent = obj.rung;
+
+		//name
 		let champName = document.createElement('span')
 		champion.appendChild(champName);
 		champName.setAttribute('class', 'championName')
 		champName.textContent = obj.name
+
+		switch (obj.rung) {
+			case '7':
+				champRung.style.color = 'blue'
+				champName.style.color = 'blue'
+				break;
+			case '6':
+				champRung.style.color = 'rgb(105, 0, 190)'
+				champName.style.color = 'rgb(105, 0, 190)'
+				break;
+			case '5':
+				champRung.style.color = 'rgb(179, 0, 0)'
+				champName.style.color = 'rgb(179, 0, 0)'
+				break;
+		}
 	})
 }
 

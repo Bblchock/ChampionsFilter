@@ -28,7 +28,7 @@ body {
 }
 
 .championName {
-	line-height: 480px;
+	line-height: 395px;
 	color: rgb(255, 255, 255);
 	font-family: 'Ruslan Display', cursive;
 	font-weight: bold;
@@ -39,6 +39,24 @@ body {
 	background-size: 1px;
 	border-radius: 10px;
 	padding: 5px 5px 1px 5px;
+}
+
+.championRung {
+	width: 15px;
+	height: 15px;
+
+	line-height: 17px;
+	color: rgb(255, 255, 255);
+	font-family: 'Ruslan Display', cursive;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+
+	margin: 10px;
+	background-color: rgb(0, 0, 0);
+	background-size: 1px;
+	border-radius: 45px;
+	padding: 5px;
 }
 
 .block-all,
