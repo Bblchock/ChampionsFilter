@@ -1174,14 +1174,20 @@ function render() {
 
 		switch (obj.rung) {
 			case '7':
+				champion.style.border = '3px solid blue'
+				champion.style.margin = '2px'
 				champRung.style.color = 'blue'
 				champName.style.color = 'blue'
 				break;
 			case '6':
+				champion.style.border = '3px solid rgb(105, 0, 190)'
+				champion.style.margin = '2px'
 				champRung.style.color = 'rgb(105, 0, 190)'
 				champName.style.color = 'rgb(105, 0, 190)'
 				break;
 			case '5':
+				champion.style.border = '3px solid rgb(179, 0, 0)'
+				champion.style.margin = '2px'
 				champRung.style.color = 'rgb(179, 0, 0)'
 				champName.style.color = 'rgb(179, 0, 0)'
 				break;
