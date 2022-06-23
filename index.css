@@ -2,29 +2,6 @@ body {
 	background-image: url(img/champion-masteryi-assassin-splash.jpg);
 	background-attachment: fixed;
 	background-size: 100%;
-
-}
-
-.champions {
-	display: flex;
-	flex-wrap: wrap;
-	max-width: 990px;
-	height: 200px;
-	padding: 5px;
-	margin: 0 auto;
-}
-
-.champion {
-	width: 188px;
-	height: 268px;
-	margin: 5px;
-	background-color: rgba(0, 204, 255, 0.527);
-	overflow: hidden;
-	transition: 0.5s all;
-	border-radius: 15px;
-	background-size: auto;
-	background-position: center;
-	background-size: 245px auto;
 }
 
 .championName {
@@ -86,9 +63,9 @@ button {
 	cursor: pointer;
 }
 
-#max,
-#aboveFive,
-#belowFive {
+#maxRung,
+#rungAboveFive,
+#rungBelowFive {
 	width: 135px;
 }
 
@@ -104,4 +81,26 @@ button {
 
 .noActive:hover {
 	border: 1px double rgb(0, 0, 255);
+}
+
+.champions {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 990px;
+	height: 200px;
+	padding: 5px;
+	margin: 0 auto;
+}
+
+.champion {
+	width: 188px;
+	height: 268px;
+	margin: 5px;
+	background-color: rgba(0, 204, 255, 0.527);
+	overflow: hidden;
+	transition: 0.5s all;
+	border-radius: 15px;
+	background-size: auto;
+	background-position: center;
+	background-size: 245px auto;
 }
