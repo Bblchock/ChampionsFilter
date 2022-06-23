@@ -21,6 +21,8 @@ const btnAll = document.getElementById('all')
 const divChampions = document.querySelector('.champions')
 const button = document.querySelectorAll('button')
 
+const count = document.querySelector('.show')
+
 let valueTrue = {
 	all: true,
 	maxRung: false,
@@ -40,6 +42,7 @@ let valueTrue = {
 window.valueTrue = valueTrue;
 
 let finaly = []
+
 function render() {
 	while (divChampions.firstChild) {
 		divChampions.removeChild(divChampions.firstChild)
@@ -208,6 +211,7 @@ let findChampions = function () {
 		finaly = finaly.filter(champ => champ.role.indexOf('adk') !== -1)
 	}
 	render()
+	count.textContent = 'Shown: ' + finaly.length;
 }
 
 btnTop.addEventListener('click', switcherValue)

@@ -104,3 +104,13 @@ button {
 	background-position: center;
 	background-size: 245px auto;
 }
+
+.show {
+	position: absolute;
+	width: 200px;
+	margin-left: -775px;
+	color: white;
+	font-size: 22px;
+	font-family: 'Ruslan Display', cursive;
+	text-shadow: 2px 2px 2px red;
+}
