@@ -121,13 +121,9 @@ let switcherValue = function () {
 	let target = (event.target.textContent)
 
 	function change() {
-		if (valueTrue[target] === false) {
-			valueTrue[target] = true
-			valueTrue.all = false
-		}
-		else {
-			valueTrue[target] = false
-		}
+		valueTrue[target] = !valueTrue[target]
+		valueTrue.all = false
+
 		color()
 	}
 
