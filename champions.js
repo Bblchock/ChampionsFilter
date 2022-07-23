@@ -274,7 +274,7 @@ let champions = [
 	},
 	{
 		name: 'Джин',
-		rung: '2',
+		rung: '5',
 		position: ['bot', 'top', 'mid'],
 		role: ['adk'],
 		img: 'url(img/jhin.jpg)',
