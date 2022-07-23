@@ -120,7 +120,7 @@ let champions = [
 	},
 	{
 		name: 'Варус',
-		rung: '5',
+		rung: '6',
 		position: ['bot', 'top', 'mid'],
 		role: ['adk'],
 		img: 'url(img/varus.jpg)',
@@ -204,7 +204,7 @@ let champions = [
 	},
 	{
 		name: 'Гарен',
-		rung: '3',
+		rung: '6',
 		position: ['top', 'mid'],
 		role: ['tank', 'fighter'],
 		img: 'url(img/garen.jpg)',
@@ -610,7 +610,7 @@ let champions = [
 	},
 	{
 		name: 'Мальфит',
-		rung: '5',
+		rung: '6',
 		position: ['top', 'jungle', 'bot'],
 		role: ['tank', 'apk', 'support'],
 		img: 'url(img/malaphite.jpg)',
@@ -792,7 +792,7 @@ let champions = [
 	},
 	{
 		name: 'Ренектон',
-		rung: '4',
+		rung: '5',
 		position: ['top'],
 		role: ['fighter', 'tank'],
 		img: 'url(img/renekton.jpg)',
@@ -960,7 +960,7 @@ let champions = [
 	},
 	{
 		name: 'Трандл',
-		rung: '5',
+		rung: '6',
 		position: ['top', 'jungle'],
 		role: ['tank', 'fighter'],
 		img: 'url(img/trundle.jpg)',
@@ -1037,7 +1037,7 @@ let champions = [
 	},
 	{
 		name: 'Шако',
-		rung: '6',
+		rung: '7',
 		position: ['top', 'mid', 'jungle', 'bot'],
 		role: ['apk', 'assassin'],
 		img: 'url(img/shaco.jpg)',

@@ -137,21 +137,21 @@ let switcherValue = function () {
 	} else if (target.includes('MaxRung')) {
 		target = 'maxRung'
 		change()
-		if (valueTrue.maxRung === true) {
+		if (valueTrue.maxRung) {
 			valueTrue.rungAboveFive = false
 			valueTrue.rungBelowFive = false
 		}
 	} else if (target.includes('Rung 5-6')) {
 		target = 'rungAboveFive'
 		change()
-		if (valueTrue.rungAboveFive === true) {
+		if (valueTrue.rungAboveFive) {
 			valueTrue.maxRung = false
 			valueTrue.rungBelowFive = false
 		}
 	} else if (target.includes('Rung < 5')) {
 		target = 'rungBelowFive'
 		change()
-		if (valueTrue.rungBelowFive === true) {
+		if (valueTrue.rungBelowFive) {
 			valueTrue.maxRung = false
 			valueTrue.rungAboveFive = false
 		}
@@ -167,43 +167,43 @@ let switcherValue = function () {
 let findChampions = function () {
 	finaly = champions.slice(0)
 
-	if (valueTrue.maxRung === true) {
+	if (valueTrue.maxRung) {
 		finaly = finaly.filter(champ => champ.rung === '7')
 	}
-	if (valueTrue.rungAboveFive === true) {
+	if (valueTrue.rungAboveFive) {
 		finaly = finaly.filter(champ => champ.rung === '5' || champ.rung === '6')
 	}
-	if (valueTrue.rungBelowFive === true) {
+	if (valueTrue.rungBelowFive) {
 		finaly = finaly.filter(champ => champ.rung < '5')
 	}
-	if (valueTrue.top === true) {
+	if (valueTrue.top) {
 		finaly = finaly.filter(champ => champ.position.indexOf('top') !== -1)
 	}
-	if (valueTrue.mid === true) {
+	if (valueTrue.mid) {
 		finaly = finaly.filter(champ => champ.position.indexOf('mid') !== -1)
 	}
-	if (valueTrue.bot === true) {
+	if (valueTrue.bot) {
 		finaly = finaly.filter(champ => champ.position.indexOf('bot') !== -1)
 	}
-	if (valueTrue.jungle === true) {
+	if (valueTrue.jungle) {
 		finaly = finaly.filter(champ => champ.position.indexOf('jungle') !== -1)
 	}
-	if (valueTrue.tank === true) {
+	if (valueTrue.tank) {
 		finaly = finaly.filter(champ => champ.role.indexOf('tank') !== -1)
 	}
-	if (valueTrue.assasin === true) {
+	if (valueTrue.assasin) {
 		finaly = finaly.filter(champ => champ.role.indexOf('assasin') !== -1)
 	}
-	if (valueTrue.fighter === true) {
+	if (valueTrue.fighter) {
 		finaly = finaly.filter(champ => champ.role.indexOf('fighter') !== -1)
 	}
-	if (valueTrue.support === true) {
+	if (valueTrue.support) {
 		finaly = finaly.filter(champ => champ.role.indexOf('support') !== -1)
 	}
-	if (valueTrue.apk === true) {
+	if (valueTrue.apk) {
 		finaly = finaly.filter(champ => champ.role.indexOf('apk') !== -1)
 	}
-	if (valueTrue.adk === true) {
+	if (valueTrue.adk) {
 		finaly = finaly.filter(champ => champ.role.indexOf('adk') !== -1)
 	}
 	render()
