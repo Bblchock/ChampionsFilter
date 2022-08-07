@@ -204,7 +204,7 @@ let champions = [
 	},
 	{
 		name: 'Гарен',
-		rung: '6',
+		rung: '7',
 		position: ['top', 'mid'],
 		role: ['tank', 'fighter'],
 		img: 'url(img/garen.jpg)',
@@ -841,7 +841,7 @@ let champions = [
 	},
 	{
 		name: 'Сенна',
-		rung: '5',
+		rung: '6',
 		position: ['bot'],
 		role: ['support', 'adk'],
 		img: 'url(img/senna.jpg)',
@@ -904,7 +904,7 @@ let champions = [
 	},
 	{
 		name: 'Сорака',
-		rung: '5',
+		rung: '6',
 		position: ['bot'],
 		role: ['support'],
 		img: 'url(img/soraka.jpg)',
