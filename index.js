@@ -41,7 +41,7 @@ let valueTrue = {
 }
 window.valueTrue = valueTrue;
 
-let finaly = []
+let finaly = champions.slice(0)
 
 function render() {
 	while (divChampions.firstChild) {
@@ -166,46 +166,28 @@ let switcherValue = function () {
 
 let findChampions = function () {
 	finaly = champions.slice(0)
+	for (let key in valueTrue) {
+		if (valueTrue[key]) {
+			if (key !== 'all') {
+				let rung = '01234567';
+				if (key === 'maxRung'
+					|| key === 'rungAboveFive'
+					|| key === 'rungBelowFive') {
+					if (key === 'maxRung') rung = '7';
+					if (key === 'rungAboveFive') rung = '56';
+					if (key === 'rungBelowFive') rung = '01234';
+					finaly = finaly.filter(obj => rung.includes(obj.rung));
+				} else {
+					finaly = finaly.filter(obj => {
+						if (obj.position.includes(key) || obj.role.includes(key)) {
+							return true;
+						}
+					});
+				}
+			}
+		}
+	}
 
-	if (valueTrue.maxRung) {
-		finaly = finaly.filter(champ => champ.rung === '7')
-	}
-	if (valueTrue.rungAboveFive) {
-		finaly = finaly.filter(champ => champ.rung === '5' || champ.rung === '6')
-	}
-	if (valueTrue.rungBelowFive) {
-		finaly = finaly.filter(champ => champ.rung < '5')
-	}
-	if (valueTrue.top) {
-		finaly = finaly.filter(champ => champ.position.indexOf('top') !== -1)
-	}
-	if (valueTrue.mid) {
-		finaly = finaly.filter(champ => champ.position.indexOf('mid') !== -1)
-	}
-	if (valueTrue.bot) {
-		finaly = finaly.filter(champ => champ.position.indexOf('bot') !== -1)
-	}
-	if (valueTrue.jungle) {
-		finaly = finaly.filter(champ => champ.position.indexOf('jungle') !== -1)
-	}
-	if (valueTrue.tank) {
-		finaly = finaly.filter(champ => champ.role.indexOf('tank') !== -1)
-	}
-	if (valueTrue.assasin) {
-		finaly = finaly.filter(champ => champ.role.indexOf('assasin') !== -1)
-	}
-	if (valueTrue.fighter) {
-		finaly = finaly.filter(champ => champ.role.indexOf('fighter') !== -1)
-	}
-	if (valueTrue.support) {
-		finaly = finaly.filter(champ => champ.role.indexOf('support') !== -1)
-	}
-	if (valueTrue.apk) {
-		finaly = finaly.filter(champ => champ.role.indexOf('apk') !== -1)
-	}
-	if (valueTrue.adk) {
-		finaly = finaly.filter(champ => champ.role.indexOf('adk') !== -1)
-	}
 	render()
 	count.textContent = 'Shown: ' + finaly.length;
 }
