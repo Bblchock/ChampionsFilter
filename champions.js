@@ -904,7 +904,7 @@ let champions = [
 	},
 	{
 		name: 'Сорака',
-		rung: '6',
+		rung: '7',
 		position: ['bot'],
 		role: ['support'],
 		img: 'url(img/soraka.jpg)',
