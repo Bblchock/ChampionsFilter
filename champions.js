@@ -309,7 +309,7 @@ let champions = [
 	},
 	{
 		name: 'Ёнэ',
-		rung: '6',
+		rung: '7',
 		position: ['mid', 'top'],
 		role: ['fighter'],
 		img: 'url(img/yone.jpg)',
