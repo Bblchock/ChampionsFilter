@@ -939,7 +939,7 @@ let champions = [
 	},
 	{
 		name: 'ТвистедФейт',
-		rung: '4',
+		rung: '5',
 		position: ['mid', 'bot'],
 		role: ['apk', 'adk', 'support'],
 		img: 'url(img/twistedfate.jpg)',
