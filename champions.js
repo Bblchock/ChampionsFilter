@@ -456,7 +456,7 @@ let champions = [
 	},
 	{
 		name: 'Кассадин',
-		rung: '5',
+		rung: '6',
 		position: ['mid', 'top'],
 		role: ['assasin'],
 		img: 'url(img/kassadin.jpg)',
