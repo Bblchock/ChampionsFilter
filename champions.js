@@ -183,7 +183,7 @@ let champions = [
 	},
 	{
 		name: 'Вуконг',
-		rung: '5',
+		rung: '6',
 		position: ['top', 'mid', 'jungle'],
 		role: ['fighter'],
 		img: 'url(img/monkeyking.jpg)',
