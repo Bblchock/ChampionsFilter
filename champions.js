@@ -603,7 +603,7 @@ let champions = [
 	},
 	{
 		name: 'Мальзахар',
-		rung: '6',
+		rung: '7',
 		position: ['mid'],
 		role: ['apk', 'support'],
 		img: 'url(img/malzahar.jpg)',
