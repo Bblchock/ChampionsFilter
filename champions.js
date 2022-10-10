@@ -841,7 +841,7 @@ let champions = [
 	},
 	{
 		name: 'Сенна',
-		rung: '6',
+		rung: '7',
 		position: ['bot'],
 		role: ['support', 'adk'],
 		img: 'url(img/senna.jpg)',
@@ -925,7 +925,7 @@ let champions = [
 	},
 	{
 		name: 'Талон',
-		rung: '6',
+		rung: '7',
 		position: ['mid'],
 		role: ['assasin'],
 		img: 'url(img/talon.jpg)',
