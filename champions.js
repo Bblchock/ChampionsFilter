@@ -323,7 +323,7 @@ let champions = [
 	},
 	{
 		name: 'Зайра',
-		rung: '4',
+		rung: '5',
 		position: ['mid', 'bot'],
 		role: ['apk', 'support'],
 		img: 'url(img/zyra.jpg)',
@@ -673,7 +673,7 @@ let champions = [
 	},
 	{
 		name: 'Нидали',
-		rung: '4',
+		rung: '5',
 		position: ['bot', 'top', 'mid', 'jungle'],
 		role: ['support', 'assasin', 'fighter', 'apk'],
 		img: 'url(img/nidalee.jpg)',
