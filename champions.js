@@ -953,7 +953,7 @@ let champions = [
 	},
 	{
 		name: 'Тимо',
-		rung: '4',
+		rung: '6',
 		position: ['top'],
 		role: ['apk'],
 		img: 'url(img/teemo.jpg)',
