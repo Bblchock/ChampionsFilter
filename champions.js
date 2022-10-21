@@ -141,7 +141,7 @@ let champions = [
 	},
 	{
 		name: 'Векс',
-		rung: '6',
+		rung: '7',
 		position: ['mid', 'top'],
 		role: ['apk'],
 		img: 'url(img/vex.jpg)',
