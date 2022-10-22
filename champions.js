@@ -15,7 +15,7 @@ let champions = [
 	},
 	{
 		name: 'Акшан',
-		rung: '1',
+		rung: '5',
 		position: ['bot', 'mid'],
 		role: ['adk'],
 		img: 'url(img/akshan.jpg)',
