@@ -35,13 +35,9 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
           
-      - name: Deploy GitHub Pages site
-        uses: actions/deploy-pages@v1.2.3
+      - name: Github Pages Deploy Action
+        uses: avinal/github-pages-deploy-action@v0.9
         with:
-          token: default is ${{ github.token }}
-          # Time in milliseconds after which to timeout and cancel the deployment (default: 10 minutes)
-          timeout: 600000
-          # Maximum number of status report errors before cancelling a deployment (default: 10)
-          error_count: 10
-          # Time in milliseconds between two deployment status report (default: 5 seconds)
-          reporting_interval: 5000
+          # GitHub access token with Repo Access
+          GITHUB_TOKEN: ${{ github.token }}
+          # java(for JavaDoc), python(For Python Site/Documentation Generators)
