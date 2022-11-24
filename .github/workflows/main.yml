@@ -9,6 +9,10 @@ jobs:
   my_job:
     name: deploy to staging
     runs-on: ubuntu-18.
+    
+    steps:
+    - name: Print Hello Message
+      run: echo "Hello World"
   test:
     name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
